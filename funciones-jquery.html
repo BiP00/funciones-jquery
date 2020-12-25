@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="wrapper w-75 text-center bg-secondary border border-info mx-auto p-3">
+      <h3 class="p-3 mb-5 bg-info rounded"
+        style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Todos estos efectos son
+        gatillados usando la función .onclick.</h3>
+      <div class="wrapper p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Hide</h2>
+        <p id="hide">Haz click en el botón para esconder el párrafo</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonHide">HIDE</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Show</h2>
+        <p id="parrShow" style="display: none;">Muestra el párrafo</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonShow">SHOW</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Toggle</h2>
+        <p id="parrToggle">Aparece o desaparece el párrafo</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonToggle">TOGGLE</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Slide-Down</h2>
+        <p id="parrSlideDown" style="display: none;">Muestra el párrafo deslizando hacia abajo</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonSlideDown">SLIDE-DOWN</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Slide-Up</h2>
+        <p id="parrSlideUp">Esconde el párrafo deslizando hacia arriba</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonSlideUp">SLIDE-UP</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Slide-Toggle</h2>
+        <p id="parrSlideToggle">Esconde o muestra el párrafo deslizando hacia arriba y abajo</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded"
+          id="botonSlideToggle">SLIDE-TOGGLE</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Fade-In</h2>
+        <p id="parrFadeIn" style="display: none">Muestra el párrafo con un efecto</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonFadeIn">FADE-IN</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Fade-Out</h2>
+        <p id="parrFadeOut">Desvanece el párrafo con un efecto</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonFadeOut">FADE-OUT</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">AddClass</h2>
+        <p id="parrAddClass">Agrega una clase a el párrafo, en este caso, la letra la deja en negrita</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonAddClass">AddClass</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Before</h2>
+        <p id="parrBefore">Parrafo indicado</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonBefore">Before</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">After</h2>
+        <p id="parrAfter">Parrafo indicado</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonAfter">After</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Append</h2>
+        <p id="parrAppend">Agrega al final </p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonAppend">Append</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">html</h2>
+        <p id="parrHtml">Reemplaza el elemento.</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonHtml">html</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Attr</h2>
+        <p id="parrAttr">Permite cambiar u obtener atributos de un elemento o insertar, <br> a este párrafo se le
+          insertó el tipo: </p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonAttr">attr</button>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Val</h2>
+        <p id="parrVal">.val permite obtener un valor dentro de un elemento. En este caso <br>
+          toma el valor de lo que se escribe en la casilla y lo guarda en una variable, para después mostrarlo en un nuevo párrafo</p>
+        <input id="casilla" type="text">
+        <p id="inputVal"></p>
+      </div>
+      <div class="mt-2 p-3 border bg-info border-primary">
+        <h2 class="w-25 mx-auto mb">Text</h2>
+        <p id="parrText">.text</p>
+        <button type="button" class="btn btn-light shadow-lg p-2 mb-3 rounded" id="botonText">Text</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      // 1.- Hide
+      $('#botonHide').on('click', function () {
+        $('#hide').hide();
+      });
+      //2.- Show
+      $('#botonShow').on('click', function () {
+        $('#parrShow').show();
+      });
+      //3.- Toggle
+      $('#botonToggle').on('click', function () {
+        $('#parrToggle').toggle();
+      });
+      //4.- slideDown
+      $('#botonSlideDown').on('click', function () {
+        $('#parrSlideDown').slideDown();
+      });
+      //5.- slideUp
+      $('#botonSlideUp').on('click', function () {
+        $('#parrSlideUp').slideUp();
+      });
+      //6.- slideToggle
+      $('#botonSlideToggle').on('click', function () {
+        $('#parrSlideToggle').slideToggle();
+      });
+      //7.- fadeIn
+      $('#botonFadeIn').on('click', function () {
+        $('#parrFadeIn').fadeIn();
+      });
+      //8.- fadeOut
+      $('#botonFadeOut').on('click', function () {
+        $('#parrFadeOut').fadeOut();
+      });
+      //9.- addClass
+      $('#botonAddClass').on('click', function () {
+        $('#parrAddClass').addClass('font-weight-bold');
+      });
+      //10.- before
+      $('#botonBefore').on('click', function () {
+        $('#parrBefore').before('<b>Agrega un elemento antes de donde se indique</b>');
+      });
+      //11.- after
+      $('#botonAfter').on('click', function () {
+        $('#parrAfter').after('<b>Agrega un elemento después de donde se indique</b><br>');
+      });
+      //12.- append
+      $('#botonAppend').on('click', function () {
+        $('#parrAppend').append('<b>dentro del elemento</b>');
+      });
+      //13.- html
+      $('#botonHtml').on('click', function () {
+        $('#parrHtml').html('<b>Elemento reemplazado</b> (También permite guardar el elemento HTML completo.)');
+      });
+      //14.- attr
+      $('#botonAttr').on('click', function () {
+        $('#parrAttr').attr("type", "button");
+        var attr = $('#parrAttr').attr('type');
+        $('#parrAttr').append(attr);
+        $('#parrAttr').append('<p>Luego se obtuvo ese atributo y se guardó en una variable <br> para después mostrarlo dentro del párrafo usando .append</p>');
+      });
+      //15.- val
+      $("#casilla")
+        .keyup(function () {
+          var value = $(this).val();
+          $("#inputVal").text(value);
+        })
+        .keyup();
+        //16.- html
+      $('#botonText').on('click', function () {
+        $('#parrText').text('Reemplaza el texto, no el elemento HTML.');
+      });
+
+    })
+  </script>
+</body>
+
+</html>
